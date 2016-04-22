@@ -6,7 +6,6 @@
       $http.get($scope.user.repos_url)
         .then(onRepos, onError);    
       $scope.error = null;
-      $scope.repoSortOrder = "-stargazers_count"; // "-" will assure descending order
     };
     
     var onRepos = function(response) {
@@ -24,7 +23,7 @@
 
     $scope.username = "angular";
     $scope.message = "GitHub Viewer";
-
+    $scope.repoSortOrder = "-stargazers_count"; // "-" will assure descending order
   };
   
   var app = angular.module("githubViewer", []);
